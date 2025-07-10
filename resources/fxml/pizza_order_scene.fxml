@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.austin.pizzaorder.controller.PizzaOrderController"
+            prefHeight="300.0" prefWidth="400.0">
+
+    <VBox spacing="15" alignment="TOP_CENTER" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+
+        <Label text="Pizza Order" styleClass="header-label"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Select Size:"/>
+            <ComboBox fx:id="sizeComboBox" prefWidth="150"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Toppings:"/>
+            <CheckBox text="Cheese" fx:id="cheeseCheckBox"/>
+            <CheckBox text="Pepperoni" fx:id="pepperoniCheckBox"/>
+            <CheckBox text="Mushrooms" fx:id="mushroomCheckBox"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button text="Place Order" onAction="#placeOrder"/>
+            <Label text="Total:"/>
+            <Label fx:id="totalLabel" text="\$0.00"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>
+
